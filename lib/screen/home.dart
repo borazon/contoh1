@@ -109,7 +109,12 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return Container(
+                return ListTile(
+                  leading: CircleAvatar(
+                    child: Container(
+                      
+                    ),
+                  ),
                   color: index.isOdd ? Colors.white : Colors.black12,
                   height: 100.0,
                   child: Center(
