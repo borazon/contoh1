@@ -109,22 +109,34 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    child: Container(
-                      
-                    ),
-                  ),
-                  color: index.isOdd ? Colors.white : Colors.black12,
-                  height: 100.0,
-                  child: Center(
-                    child: Text('$index', textScaleFactor: 5),
-                  ),
-                );
+                if (index == 0) {
+                  return Padding(
+                    padding: EdgeInsets.only(left: 15, top: 10, bottom: 5),
+                    child: Text("INBOX", TextStyle(color: Colors.grey[800], fontSize: 12.5)),
+                  );
+                }
               },
-              childCount: 20,
             ),
           ),
+          // SliverList(
+          //   delegate: SliverChildBuilderDelegate(
+          //     (BuildContext context, int index) {
+          //       return ListTile(
+          //         leading: CircleAvatar(
+          //           child: Container(
+
+          //           ),
+          //         ),
+          //         color: index.isOdd ? Colors.white : Colors.black12,
+          //         height: 100.0,
+          //         child: Center(
+          //           child: Text('$index', textScaleFactor: 5),
+          //         ),
+          //       );
+          //     },
+          //     childCount: 20,
+          //   ),
+          // ),
         ],
       ),
       key: _drawerkey,
