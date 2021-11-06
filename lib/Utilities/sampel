@@ -1,0 +1,82 @@
+
+//   child: Row(
+                //     mainAxisSize: MainAxisSize.min,
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     crossAxisAlignment: CrossAxisAlignment.center,
+                //     children: [
+                //       Container(
+                //         width: size.width,
+                //         height: 100,
+                //         decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(20),
+                //           color: Colors.white,
+                //         ),
+                //         child: Stack(
+                //           children: [
+                //             Positioned.fill(
+                //               child: Align(
+                //                 alignment: Alignment.center,
+                //                 child: Container(
+                //                   width: 998,
+                //                   height: 40,
+                //                   decoration: BoxDecoration(
+                //                     borderRadius: BorderRadius.circular(100),
+                //                     boxShadow: [
+                //                       BoxShadow(
+                //                         color: Color(0x33000000),
+                //                         blurRadius: 15,
+                //                         offset: Offset(2, 4),
+                //                       ),
+                //                     ],
+                //                     color: Color(0xffeef3fb),
+                //                   ),
+                //                 ),
+                //               ),
+                //             ),
+                //             // Positioned(
+                //             //   left: 380,
+                //             //   top: 37,
+                //             //   child: Container(
+                //             //     width: 30,
+                //             //     height: 30,
+                //             //     child: Stack(
+                //             //       children: [
+                //             //         Container(
+                //             //           width: 30,
+                //             //           height: 30,
+                //             //         ),
+                //             //         Positioned.fill(
+                //             //           child: Align(
+                //             //             alignment: Alignment.topLeft,
+                //             //             child: Container(
+                //             //               width: 80.01,
+                //             //               height: 120,
+                //             //               child: CircleAvatar(),
+                //             //             ),
+                //             //           ),
+                //             //         ),
+                //             //       ],
+                //             //     ),
+                //             //   ),
+                //             // ),
+                //             // Positioned(
+                //             //   left: 60,
+                //             //   top: 35,
+                //             //   child: Text(
+                //             //     "Telusuri dalam email",
+                //             //     style: TextStyle(
+                //             //       color: Color(0xff444746),
+                //             //       fontSize: 14,
+                //             //     ),
+                //             //   ),
+                //             // ),
+                //             // Positioned(
+                //             //   left: 20,
+                //             //   top: 33,
+                //             //   child: Icon(Icons.menu, size: 30),
+                //             // ),
+                //           ],
+                //         ),
+                //       ),
+                //     ],
+                //   ),
