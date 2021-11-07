@@ -112,9 +112,32 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
                 if (index == 0) {
                   return Padding(
                     padding: EdgeInsets.only(left: 15, top: 10, bottom: 5),
-                    child: Text("INBOX", TextStyle(color: Colors.grey[800], fontSize: 12.5)),
+                    child: Text("INBOX",style: TextStyle(color: Colors.grey[800], fontSize: 12.5)),
                   );
                 }
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(
+                        top: 3.0, bottom: 3.0, right: 0.0),
+                      padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            child: Text("Hello", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
+                            // radius: 24.0,
+                          ),
+                          SizedBox(
+                            width: 15.0,
+                          ),
+                          SizedBox(height: 30.0,
+                          ),
+                        ],
+                      ),  
+                    ),
+                  ],
+                );
               },
             ),
           ),
