@@ -112,29 +112,52 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
                 if (index == 0) {
                   return Padding(
                     padding: EdgeInsets.only(left: 15, top: 10, bottom: 5),
-                    child: Text("INBOX",style: TextStyle(color: Colors.grey[800], fontSize: 12.5)),
+                    child: Text("INBOX",
+                        style:
+                            TextStyle(color: Colors.grey[800], fontSize: 12.5)),
                   );
                 }
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(
-                        top: 3.0, bottom: 3.0, right: 0.0),
-                      padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+                      margin:
+                          EdgeInsets.only(top: 3.0, bottom: 3.0, right: 0.0),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
                       child: Row(
                         children: [
-                          CircleAvatar(
-                            child: Text("Hello", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
-                            // radius: 24.0,
-                          ),
+                          CircleAvatar(),
+                          // radius: 24.0,
                           SizedBox(
                             width: 15.0,
                           ),
-                          SizedBox(height: 30.0,
+                          SizedBox(
+                            height: 30.0,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Indra",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.6,
+                                child: Text(
+                                  "View jobs in Bengaluru, Karnataka, India, match your preferences, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
-                      ),  
+                      ),
                     ),
                   ],
                 );
