@@ -14,12 +14,7 @@ class HOME extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _HOMEState extends State<HOME> with TickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _drawerkey = GlobalKey();
-  // bool _pinned = true;
-  // bool _snap = false;
-  // bool _floating = false;
 
-// [SliverAppBar]s are typically used in [CustomScrollView.slivers], which in
-// turn can be placed in a [Scaffold.body].
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -34,12 +29,9 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
                   bottomRight: Radius.circular(50),
                   bottomLeft: Radius.circular(50)),
             ),
-            // pinned: _pinned,
-            // snap: _snap,
             elevation: 0.0,
             backgroundColor: Colors.white,
             floating: true,
-            // expandedHeight: 160.0,
             flexibleSpace: SafeArea(
               // mainAxisAlignment: MainAxisAlignment.center,
               child: Container(
@@ -70,8 +62,11 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
                           },
                           child: Icon(
                             Icons.menu,
-                            size: 30,
+                            size: 24,
                           ),
+                        ),
+                        SizedBox(
+                          width: 6,
                         ),
                         Text(
                           'Search in mail',
@@ -82,7 +77,10 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
                           width: 85,
                         ),
                         SizedBox(
-                          width: 35,
+                          width: 40,
+                        ),
+                        SizedBox(
+                          width: 25,
                           child: RawMaterialButton(
                             onPressed: () {},
                             child: CircleAvatar(),
@@ -109,17 +107,89 @@ class _HOMEState extends State<HOME> with TickerProviderStateMixin {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return Container(
-                  color: index.isOdd ? Colors.white : Colors.black12,
-                  height: 100.0,
-                  child: Center(
-                    child: Text('$index', textScaleFactor: 5),
-                  ),
+                if (index == 0) {
+                  return Padding(
+                    padding: EdgeInsets.only(left: 15, top: 10, bottom: 5),
+                    child: Text("INBOX",
+                        style:
+                            TextStyle(color: Colors.grey[800], fontSize: 12.5)),
+                  );
+                }
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      margin:
+                          EdgeInsets.only(top: 3.0, bottom: 3.0, right: 0.0),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+                      child: Row(
+                        children: [
+                          CircleAvatar(),
+                          // radius: 24.0,
+                          SizedBox(
+                            width: 15.0,
+                          ),
+                          SizedBox(
+                            height: 30.0,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Indra",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.7,
+                                height: 60,
+                                child: Text(
+                                  "View jobs in Bengaluru, Karnataka, India, match your preferences, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 3,
+                                ),
+                                // Icon(Icons.star),
+                                // SizedBox(width: 8.0,),
+                                // Text("13.31", style: TextStyle(color: Colors.grey[800], fontSize: 11),),
+                              ),
+                                ],
+                                ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 );
               },
-              childCount: 20,
             ),
           ),
+          // SliverList(
+          //   delegate: SliverChildBuilderDelegate(
+          //     (BuildContext context, int index) {
+          //       return ListTile(
+          //         leading: CircleAvatar(
+          //           child: Container(
+
+          //           ),
+          //         ),
+          //         color: index.isOdd ? Colors.white : Colors.black12,
+          //         height: 100.0,
+          //         child: Center(
+          //           child: Text('$index', textScaleFactor: 5),
+          //         ),
+          //       );
+          //     },
+          //     childCount: 20,
+          //   ),
+          // ),
         ],
       ),
       key: _drawerkey,
